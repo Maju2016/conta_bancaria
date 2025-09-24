@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import conta_bancaria.model.Conta;
 import conta_bancaria.model.ContaCorrente;
+import conta_bancaria.model.ContaPoupanca;
 import conta_bancaria.util.Cores;
 
 public class Menu {
@@ -15,6 +16,8 @@ public class Menu {
 		int opcao;
 		
 		//Instanciar Objetos da Classe Conta
+		
+		System.out.println("\n\nInstanciar Objeto da Classe Conta");
 		
 		Conta c1 = new Conta(1, 123, 1, "Cintia Dourado", 500000.00f);
 		
@@ -57,6 +60,22 @@ public class Menu {
 		//Depositar Conta Corrente
 		cc1.depositar(5000.00f);
 		cc1.visualizar();
+		
+		//Instanciar Obejto da Classe ContaPoupança
+		System.out.println("\n\nInstanciar Objeto da ClassePoupanca");
+		
+		ContaPoupanca cp1 = new ContaPoupanca(4, 456, 1, "Maria da Silva", 100000.00f, 15);
+		
+		cp1.visualizar();
+		
+		//Sacar ContaPoupanca
+		System.out.println("Sacar R$ 200.000.00: " + cp1.sacar(200000.00f));
+		System.out.println("O saldo da conta é: R$ " + cp1.getSaldo());
+		
+		//Depositar ContaPoupanca
+		System.out.println("Depositar R$ 5.000.00");
+		cp1.depositar(5000.00f);
+		System.out.println("O Saldo da conta é: R$ " + cp1.getSaldo());
 		
 		while(true) {
 			System.out.println(Cores.TEXT_PURPLE + Cores.ANSI_BLACK_BACKGROUND

@@ -6,7 +6,7 @@ public class ContaPoupanca extends Conta{
 	
 	public ContaPoupanca(int numero, int agencia, int tipo, String titular, float saldo, int aniversario) {
 		super(numero, agencia, tipo, titular, saldo);
-		this.setAniversario(aniversario);
+		this.aniversario = aniversario;
 	}
 	
 	public int getAniversario() {
@@ -20,7 +20,7 @@ public class ContaPoupanca extends Conta{
 	@Override
 	public void visualizar() {	
 		super.visualizar();
-		System.out.printf("Aniversario: ", this.aniversario);
+		System.out.printf("Aniversario: %d", this.aniversario);
 	}
 	
 }
