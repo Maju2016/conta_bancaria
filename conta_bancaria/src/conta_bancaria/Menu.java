@@ -2,7 +2,6 @@ package conta_bancaria;
 
 import java.util.Scanner;
 
-import conta_bancaria.model.Conta;
 import conta_bancaria.model.ContaCorrente;
 import conta_bancaria.model.ContaPoupanca;
 import conta_bancaria.util.Cores;
@@ -17,7 +16,7 @@ public class Menu {
 		
 		//Instanciar Objetos da Classe Conta
 		
-		System.out.println("\n\nInstanciar Objeto da Classe Conta");
+		/*System.out.println("\n\nInstanciar Objeto da Classe Conta");
 		
 		Conta c1 = new Conta(1, 123, 1, "Cintia Dourado", 500000.00f);
 		
@@ -43,6 +42,7 @@ public class Menu {
 		
 		c1.depositar(5000);
 		System.out.println("O saldo da conta é: " + c1.getSaldo());
+		*/
 		
 		//Instanciar Objetos da Classe ContCorrente
 		
