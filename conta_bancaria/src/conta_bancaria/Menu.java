@@ -3,7 +3,7 @@ package conta_bancaria;
 import java.util.Scanner;
 
 import conta_bancaria.model.Conta;
-
+import conta_bancaria.model.ContaCorrente;
 import conta_bancaria.util.Cores;
 
 public class Menu {
@@ -19,6 +19,8 @@ public class Menu {
 		Conta c1 = new Conta(1, 123, 1, "Cintia Dourado", 500000.00f);
 		
 		Conta c2 = new Conta(2, 123, 2, "Priscila Lins", 500000.00f);
+		
+		Conta c3 = new Conta();
 		
 		System.out.println("O Saldo da conta é: " + c1.getSaldo());
 		
@@ -38,6 +40,23 @@ public class Menu {
 		
 		c1.depositar(5000);
 		System.out.println("O saldo da conta é: " + c1.getSaldo());
+		
+		//Instanciar Objetos da Classe ContCorrente
+		
+		ContaCorrente cc1 = new ContaCorrente(3, 456, 1, "Thuany Silva", 1000000.00f, 100000.00f);
+		
+		cc1.visualizar();
+		
+		//Sacar Contta Corrente
+		System.out.println(cc1.sacar(2000000.00f));
+		cc1.visualizar();
+		
+		System.out.println(cc1.sacar(2000.00f));
+		cc1.visualizar();
+		
+		//Depositar Conta Corrente
+		cc1.depositar(5000.00f);
+		cc1.visualizar();
 		
 		while(true) {
 			System.out.println(Cores.TEXT_PURPLE + Cores.ANSI_BLACK_BACKGROUND
